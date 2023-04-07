@@ -91,7 +91,18 @@ class Senec:
         if value < 0:
             return abs(value)
         return 0
-
+    @property
+    def mpp_power_0(self) -> float:
+        return self._raw["PV1"]["MPP_POWER"][0] 
+    
+    @property
+    def mpp_power_1(self) -> float:
+        return self._raw["PV1"]["MPP_POWER"][1] 
+    
+    @property
+    def mpp_power_2(self) -> float:
+        return self._raw["PV1"]["MPP_POWER"][2] 
+    
     @property
     def battery_state_power(self) -> float:
         """
