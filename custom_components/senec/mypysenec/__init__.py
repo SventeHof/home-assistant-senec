@@ -202,6 +202,25 @@ class Senec:
         return self._raw["STATISTIC"]["LIVE_WB_ENERGY"][0] / 1000.0
 
     @property
+    def battery_temp(self) -> float:
+        """
+        Current battery temperature
+        """
+        return self._raw["TEMPMEASURE"]["BATTERY_TEMP"]
+    @property
+    def case_temp(self) -> float:
+        """
+        Current case temperature
+        """
+        return self._raw["TEMPMEASURE"]["CASE_TEMP"]
+    @property
+    def mcu_temp(self) -> float:
+        """
+        Current controller temperature
+        """
+        return self._raw["TEMPMEASURE"]["MCU_TEMP"]
+    
+    @property
     def bms_cell_temp_A1(self) -> float:
         return self._raw["BMS"]["CELL_TEMPERATURES_MODULE_A"][0] 
     @property
@@ -589,6 +608,11 @@ class Senec:
                 "L2_CHARGING_CURRENT": "",
                 "L3_CHARGING_CURRENT": "",
                 "EV_CONNECTED": "",
+            },
+            "TEMPMEASURE": {
+                "BATTERY_TEMP": "",
+                "CASE_TEMP": "",
+                "MCU_TEMP": "",
             },
             "BMS": {
                 "CELL_TEMPERATURES_MODULE_A": "",
