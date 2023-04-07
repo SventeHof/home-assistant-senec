@@ -91,14 +91,13 @@ class Senec:
         if value < 0:
             return abs(value)
         return 0
+    
     @property
     def mpp_power_0(self) -> float:
         return self._raw["PV1"]["MPP_POWER"][0] 
-    
     @property
     def mpp_power_1(self) -> float:
         return self._raw["PV1"]["MPP_POWER"][1] 
-    
     @property
     def mpp_power_2(self) -> float:
         return self._raw["PV1"]["MPP_POWER"][2] 
@@ -580,7 +579,7 @@ class Senec:
                 "LIVE_PV_GEN": "",
                 "LIVE_WB_ENERGY": "",
             },
-            "PV1": {"POWER_RATIO": ""},
+            "PV1": {"POWER_RATIO": "", "MPP_POWER": ""},
             "PWR_UNIT": {"POWER_L1": "", "POWER_L2": "", "POWER_L3": ""},
             "PM1OBJ1": {"FREQ": "", "U_AC": "", "I_AC": "", "P_AC": "", "P_TOTAL": ""},
             "PM1OBJ2": {"FREQ": "", "U_AC": "", "I_AC": "", "P_AC": "", "P_TOTAL": ""},
