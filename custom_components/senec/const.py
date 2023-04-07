@@ -177,7 +177,13 @@ SENSOR_TYPES = [
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
     ),
-     SensorEntityDescription(
+    SensorEntityDescription(
+        key="battery_temp",
+        name="Battery Temperature",
+        native_unit_of_measurement=TEMP_CELSIUS,
+        icon="mdi:thermometer",
+    ),
+    SensorEntityDescription(
         key="case_temp",
         name="Case Temperature",
         native_unit_of_measurement=TEMP_CELSIUS,
