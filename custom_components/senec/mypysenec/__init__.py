@@ -103,6 +103,36 @@ class Senec:
         return self._raw["PV1"]["MPP_POWER"][2] 
     
     @property
+    def ac_spannung_l1(self) -> float:
+        return self._raw["PM1OBJ1"]["U_AC"][0]
+    @property
+    def ac_spannung_l2(self) -> float:
+        return self._raw["PM1OBJ1"]["U_AC"][1]
+    @property
+    def ac_spannung_l3(self) -> float:
+        return self._raw["PM1OBJ1"]["U_AC"][2]
+    
+    @property
+    def ac_strom_l1(self) -> float:
+        return self._raw["PM1OBJ1"]["I_AC"][0]
+    @property
+    def ac_strom_l2(self) -> float:
+        return self._raw["PM1OBJ1"]["I_AC"][1]
+    @property
+    def ac_strom_l3(self) -> float:
+        return self._raw["PM1OBJ1"]["I_AC"][2]
+    
+    @property
+    def ac_leistung_l1(self) -> float:
+        return self._raw["PM1OBJ1"]["P_AC"][0]
+    @property
+    def ac_leistung_l2(self) -> float:
+        return self._raw["PM1OBJ1"]["P_AC"][1]
+    @property
+    def ac_leistung_l3(self) -> float:
+        return self._raw["PM1OBJ1"]["P_AC"][2]
+
+    @property
     def battery_state_power(self) -> float:
         """
         Battery charging power (W)
