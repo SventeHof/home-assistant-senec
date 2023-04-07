@@ -857,5 +857,28 @@ SENSOR_TYPES = [
         native_unit_of_measurement=PERCENTAGE,
         state_class=SensorStateClass.MEASUREMENT,
     ),
-
+SensorEntityDescription(
+        key="mpp_power_0",
+        name="MPP Power 0",
+        native_unit_of_measurement=POWER_WATT,
+        icon="mdi:solar-power",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
+    SensorEntityDescription(
+        key="mpp_power_1",
+        name="MPP Power 1",
+        native_unit_of_measurement=POWER_WATT,
+        icon="mdi:solar-power",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
+    SensorEntityDescription(
+        key="mpp_power_2",
+        name="MPP Power 2",
+        native_unit_of_measurement=POWER_WATT,
+        icon="mdi:solar-power",
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+    ),
 ]
