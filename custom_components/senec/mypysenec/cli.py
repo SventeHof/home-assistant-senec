@@ -2,13 +2,13 @@ import argparse
 import asyncio
 from pprint import pprint
 
-import aiohttp
+import aiohttps
 
 import pysenec
 
 
 async def run(host, verbose=False):
-    async with aiohttp.ClientSession() as session:
+    async with aiohttps.ClientSession() as session:
         senec = pysenec.Senec(host, session)
         if verbose:
             await senec.read_senec_v21_all()
