@@ -1,4 +1,4 @@
-import aiohttps
+import aiohttp
 
 from .constants import SYSTEM_STATE_NAME
 from .util import parse
